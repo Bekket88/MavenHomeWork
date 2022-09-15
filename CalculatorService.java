@@ -22,6 +22,10 @@ public class CalculatorService {
     }
 
     public float divide(float a, float b) {
-        return a / b;
+        if (b == 0) {
+            throw new DivisionByZeroException();
+        } else {
+            return a / b;
+        }
     }
 }
